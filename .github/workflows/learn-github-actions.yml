@@ -33,7 +33,7 @@ jobs:
       - name: Test build
         run: make test
 
-      - name: Build container
+      - name: Build and push container
         env:
           IMAGE_TAG_BASE: ${{ secrets.REGISTRY_USERNAME }}/${{ github.repository }}
         run: make docker-build docker-push
