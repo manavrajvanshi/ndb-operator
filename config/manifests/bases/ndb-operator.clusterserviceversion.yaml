@@ -1,0 +1,66 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: ndb-operator.v0.0.0
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions:
+    owned:
+    - description: Database is the Schema for the databases API
+      displayName: Database
+      kind: Database
+      name: databases.ndb.nutanix.com
+      version: v1alpha1
+  description: The NDB kubernetes operator enables developers to provision and delete
+    single instance PostgreSQL databases, Single instance MongoDB and Single instance
+    MySQL databases from their Kuberenetes cluster and connect these instances to
+    their applications with ease. Developers can also restore and clone their databases
+    using the NDB operator.
+  displayName: Nutanix Database Service Operator
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: false
+    type: OwnNamespace
+  - supported: false
+    type: SingleNamespace
+  - supported: false
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - Nutanix
+  - NDB
+  - Database
+  - DBaaS
+  - PostgreSQL
+  - MySQL
+  - MongoDB
+  links:
+  - name: Ndb Operator
+    url: https://ndb-operator.domain
+  maintainers:
+  - email: pritika.shenoy@nutanix.com
+    name: Pritika Shenoy
+  - email: akshay.mishra@nutanix.com
+    name: Akshay Mishra
+  - email: yashesh.mankad@nutanix.com
+    name: Yashesh Mankad
+  - email: krunal.jhaveri@nutanix.com
+    name: Krunal Jhaveri
+  - email: manav.rajvanshi@nutanix.com
+    name: Manav Rajvanshi
+  maturity: alpha
+  provider:
+    name: Nutanix, Inc.
+    url: https://www.nutanix.com/
+  version: 0.0.0
